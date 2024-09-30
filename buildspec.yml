@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+	runtime-versions:
+	    python: latest
+    commands:
+        - echo "Installing something"
+  
+  pre-build:
+    commands:
+	        - echo "We are in pre build phase"
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Python code...
+      - grep -Fq "World" application.py
+  post_build:
+    commands:
+      - echo Build completed on `date`
