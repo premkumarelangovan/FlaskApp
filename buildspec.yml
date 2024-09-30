@@ -6,7 +6,7 @@ phases:
        python: latest
     commands:
        - echo "Installing something"
-  pre-build:
+  pre_build:
     commands:
       - echo "We are in pre build phase"
   build:
