@@ -1,15 +1,13 @@
+---
 version: 0.2
-
 phases:
   install:
-	  runtime-versions:
-	    python: latest
-    commands:
-        - echo "Installing something"
-  
+    runtime-versions:python: latest
+  commands:
+    - echo "Installing something"
   pre-build:
     commands:
-	        - echo "We are in pre build phase"
+      - echo "We are in pre build phase"
   build:
     commands:
       - echo Build started on `date`
